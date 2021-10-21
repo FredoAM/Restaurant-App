@@ -1,0 +1,347 @@
+/*  import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap');
+
+
+:root{
+    --blackish: #202020;
+    --drakgray: #3f3f3f;
+    --mediumgray: #707070;
+    --eggyellow: #FFDF6C;
+    --lightergray: #DCE1E3;
+
+}
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track { 
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+/* elemento {
+    background-color: var(--main-bg-color);
+  } */
+
+*,*:before, *:after {
+
+    box-sizing: border-box ; 
+    padding: 0 ;
+    margin: 0 ;  
+}
+body{
+    background-color: var(--lightergray);
+    overflow-x: hidden;
+}
+/*NAVEGADOR */
+.logo-nav img{
+    height: 50px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color: var(--eggyellow);
+    border-bottom: 3px inset var(--blackish); 
+    font-family: 'Ubuntu', sans-serif; 
+}
+.logo-nav {
+    margin-left: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: 'Otomanopee One', sans-serif;
+}
+
+.logo-nav a{
+    text-decoration: none;
+    font-size: 40px;
+    color: var(--blackish); ;
+}
+.menu-nav{
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    height: 100%;
+    align-items: center;
+}
+
+.menu-nav li:hover{
+    cursor: pointer;
+    background-color: var(--lightergray); ;
+}
+
+.iconos-nav{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#form {
+    display: flex;
+    position: absolute;
+    left: -250px;
+}
+
+
+.form.active{
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.search{
+    margin-right: 20px;
+    width: 220px;
+    outline: none;
+    padding-left: 5px;
+}
+
+.icon {
+    min-width: 50px;
+    text-align: center;
+    padding: 6px;
+    font-size: 20px;
+  }
+
+.iconos-nav span{
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.iconos-nav span i:hover{
+    color: cadetblue;
+    cursor: pointer;
+}
+.menu-bars{
+    display: none;
+    margin-right: 30px;
+    font-size: 30px;
+}
+
+/* Contenido*/
+
+main{
+    
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* CARRUSEL*/
+
+.slider{
+    position: relative;
+    background: #000116;
+    width: 75%;
+    height: 500px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: 30px;
+  }
+  
+  .slide{
+      width: 100%;
+      height: 100%;
+      background-color:black ;
+      color: white;
+      position: absolute;
+      display: flex;
+      clip-path: circle(0% at 0 50%);
+  }
+  
+  .slider .slide.active{
+    clip-path: circle(150% at 0 50%);
+    transition: 2s;
+  }
+  .movie-poster{
+    display: flex;
+    width: 65%;
+    height: 100%;
+    background-color: skyblue;
+}
+.movie-poster img{
+    width: 100%;
+}
+.movie-overview{
+    display: grid;
+    width: 35%;
+    background-color: var(--drakgray);
+    overflow-y: auto;
+}
+
+.movie-overview h3, .movie-overview p{
+    margin-top: 10px;
+    padding: 15px;
+
+}
+
+.classificacion{
+    display: grid;
+    background-color: var(--blackish);
+    align-items: flex-end;
+    padding: 20px;
+}
+
+.classificacion span{
+    margin-top: 10px;
+    
+}
+  .navigation{
+      height: 500px;
+      z-index: 998;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+  }
+  
+  .prev-btn, .next-btn{
+    z-index: 998;
+    font-size: 2em;
+    color: #222;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .navigation-visibility{
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+  }
+  
+  
+  .navigation-visibility .slide-icon{
+    z-index: 999;
+    background: rgba(255, 255, 255, 0.5);
+    width: 20px;
+    height: 10px;
+    transform: translateY(-50px);
+    margin: 0 6px;
+    border-radius: 2px;
+    box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+  }
+  
+  .navigation-visibility .slide-icon.active{
+    background: #4285F4;
+  }
+  
+ 
+
+/*MOVIES DISPLAY ABAJO*/
+
+.movie-display{
+    width: 300px;
+    background-color: steelblue;
+    margin: 3rem;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.movie-display img{
+    width: 100%;
+    
+}
+
+.movie-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem 1rem;
+}
+
+.movie-header span{
+    background-color: #22254b;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.movie-header span.green {
+    color: lightgreen;
+  }
+  
+  .movie-header span.orange {
+    color: orange;
+  }
+  
+  .movie-header span.red {
+    color: red;
+  }
+.overview{
+    background-color: #fff;
+    padding: 2rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-height: 100%;
+    transform: translateY(101%);
+    overflow-y: auto;
+    transition: transform 0.3s ease-in;
+}
+
+.movie-display:hover .overview {
+    transform: translateY(0);
+    cursor: pointer;
+  }
+
+
+@media all and ( max-width: 500px){
+    nav{
+        width: 100vw;
+    }
+    .menu-nav, .iconos-nav, .movie-info p {
+        display: none;
+    }
+
+    .slider{
+        width: 300px;
+        margin: auto;
+        margin-top: 20px;
+    }
+    .movie-display{
+        margin: auto;
+        margin-top: 48px;
+        
+    }
+    .menu-bars{
+        display: flex;
+    }
+    .slide{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .movie-poster, .movie-overview{
+        width: 300px;
+        height: 50%;
+        margin: auto;
+    }
+    .movie-info h3{
+        padding-top: 25px;
+        text-align: center;
+
+    }
+    .classificacion{
+        padding-top: 0px;
+    }
+
+    .navigation-visibility .slide-icon{
+        transform: translateY(-12px);
+      }
+}

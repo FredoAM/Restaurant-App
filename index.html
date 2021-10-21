@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="styles/img/star.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <title>Star Show</title>
+</head>
+<body>
+
+    <nav>
+        <div class="logo-nav">
+            
+            <a href="index.html"><span>Star Show</span></a>
+            
+        </div>
+        
+        <ul class="menu-nav">
+            <li>Peliculas</li>
+            <li>Series</li>
+            <li>Documentales</li>
+            <li>Generos</li>
+        </ul>
+
+        <div class="iconos-nav">
+            <form id="form" class="form active">
+                <i class="fas fa-search icon"></i>
+                <input type="text" class="search" placeholder=" Titulo, Peliculas, Series...">
+                </form>
+            <span class="btn-search"><i class="fas fa-search btn-search"></i></span>
+            <span><i class="fas fa-user-circle"></i></span>
+            <span><i class="fas fa-sign-out-alt"></i></span>
+        </div>
+
+        <span class="menu-bars"><i class="fas fa-bars"></i></span>
+    </nav>
+    
+        <div class="slider">
+
+            
+            <div class="navigation">
+                <i class="fas fa-caret-square-left prev-btn"></i>
+                <i class="fas fa-caret-square-right next-btn"></i>
+            </div>
+    
+            <div class="navigation-visibility">
+                <div class="slide-icon active"></div>
+                <div class="slide-icon"></div>
+                <div class="slide-icon"></div>
+                <div class="slide-icon"></div>
+                <div class="slide-icon"></div>
+            
+            </div>
+        </div>
+    
+    
+
+    <main id="main"></main>
+
+    <script src="app.js"></script>
+</body>
+</html>
